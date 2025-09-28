@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Angribandu Design System - Professional & Modern */
+
+@layer base {
+  :root {
+    /* Agribandhu Agricultural Theme Colors */
+    --background: 0 0% 100%;
+    --foreground: 25 20% 15%;
+    
+    /* Brand Primary - Vibrant Agricultural Green */
+    --primary: 120 60% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 120 65% 30%;
+    
+    /* Secondary - Fresh Growth Green */
+    --secondary: 110 25% 92%;
+    --secondary-foreground: 120 15% 25%;
+    
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 25 20% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 20% 15%;
+    
+    /* Accent Colors - Smart Tech Blue-Green */
+    --accent: 160 50% 45%;
+    --accent-foreground: 0 0% 98%;
+    --accent-hover: 160 55% 40%;
+    
+    /* Agricultural Earth Tones */
+    --earth: 30 35% 60%;
+    --earth-foreground: 0 0% 98%;
+    --earth-dark: 25 40% 35%;
+    
+    /* Neutral Tones */
+    --muted: 110 15% 95%;
+    --muted-foreground: 25 10% 45%;
+    
+    --border: 110 20% 88%;
+    --input: 110 20% 88%;
+    --ring: 120 60% 35%;
+    
+    /* Status Colors - Agriculture Themed */
+    --success: 130 70% 40%;
+    --success-foreground: 0 0% 98%;
+    --warning: 45 95% 55%;
+    --warning-foreground: 25 20% 15%;
+    --destructive: 15 75% 50%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* AI Technology Colors */
+    --ai-glow: 180 60% 60%;
+    --ai-network: 160 40% 50%;
+    
+    /* Design System Variables */
+    --radius: 0.75rem;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    
+    /* Agricultural Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-earth: linear-gradient(135deg, hsl(var(--earth)), hsl(var(--earth-dark)));
+    --gradient-sunrise: linear-gradient(135deg, hsl(45 95% 70%), hsl(35 85% 60%), hsl(var(--primary)));
+    --gradient-subtle: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--ai-glow)));
+    --gradient-ai: linear-gradient(45deg, hsl(var(--ai-network)), hsl(var(--ai-glow)));
+    
+    /* Animations */
+    --transition-base: all 0.2s ease-in-out;
+    --transition-slow: all 0.3s ease-in-out;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode Agricultural Colors */
+    --background: 25 20% 8%;
+    --foreground: 0 0% 95%;
+    
+    --card: 25 15% 10%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 25 15% 10%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: 120 55% 45%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 120 60% 40%;
+    
+    --secondary: 25 15% 15%;
+    --secondary-foreground: 0 0% 88%;
+    
+    --muted: 25 15% 12%;
+    --muted-foreground: 25 10% 65%;
+    
+    --accent: 160 45% 55%;
+    --accent-foreground: 0 0% 98%;
+    --accent-hover: 160 50% 50%;
+    
+    --earth: 30 30% 45%;
+    --earth-foreground: 0 0% 95%;
+    --earth-dark: 25 35% 25%;
+    
+    --border: 25 15% 18%;
+    --input: 25 15% 18%;
+    --ring: 120 55% 45%;
+    
+    --ai-glow: 180 55% 65%;
+    --ai-network: 160 35% 55%;
+    
+    /* Update gradients for dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-earth: linear-gradient(135deg, hsl(var(--earth)), hsl(var(--earth-dark)));
+    --gradient-sunrise: linear-gradient(135deg, hsl(45 80% 50%), hsl(35 70% 45%), hsl(var(--primary)));
+    --gradient-subtle: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--ai-glow)));
+    --gradient-ai: linear-gradient(45deg, hsl(var(--ai-network)), hsl(var(--ai-glow)));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Agricultural Hero Gradient */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Sunrise Gradient */
+  .sunrise-gradient {
+    background: var(--gradient-sunrise);
+  }
+  
+  /* Earth Tones Gradient */
+  .earth-gradient {
+    background: var(--gradient-earth);
+  }
+  
+  /* AI Network Effect */
+  .ai-gradient {
+    background: var(--gradient-ai);
+  }
+  
+  /* Card Hover Effects with Agricultural Theme */
+  .card-hover {
+    transition: var(--transition-base);
+    @apply hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  /* Agricultural Button Effects */
+  .btn-glow {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+  }
+  
+  .btn-ai-glow {
+    box-shadow: 0 0 25px hsl(var(--ai-glow) / 0.5);
+  }
+  
+  /* Text Gradients */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-ai-gradient {
+    background: var(--gradient-ai);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Agricultural animations */
+  .pulse-grow {
+    animation: pulse-grow 2s ease-in-out infinite;
+  }
+  
+  .float-gentle {
+    animation: float-gentle 4s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-grow {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+  
+  @keyframes float-gentle {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+}
